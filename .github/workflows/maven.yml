@@ -28,11 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Clean
-      run: mvn clean --file simpletool-karate/pom.xml
+      run: mvn clean --file simpletool_karate/pom.xml
  
     - name: Compile
-      run: mvn compile --file simpletool-karate/pom.xml
+      run: mvn compile --file simpletool_karate/pom.xml
  
     - name: Run Tests
-      run: mvn test --file simpletool-karate/pom.xml -Dtest=BreedsRunner
+      run: mvn test --file simpletool_karate/pom.xml -Dtest=BreedsRunner
       if: (github.ref == 'refs/heads/Yvonne' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
