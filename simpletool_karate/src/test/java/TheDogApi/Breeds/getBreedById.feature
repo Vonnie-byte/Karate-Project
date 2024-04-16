@@ -13,4 +13,5 @@ Feature:Get breed by id
     Examples:
       |breedId        |responseStatus|
       |3              |200           |
+      |3              |200           |
       |1000           |400           |
